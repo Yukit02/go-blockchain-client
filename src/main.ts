@@ -1,5 +1,6 @@
 import { createApp } from 'vue';
+import { Quasar } from 'quasar';
 import App from './App.vue';
-import './registerServiceWorker';
+import quasarUserOptions from './quasar-user-options.js';
 
-createApp(App).mount('#app');
+createApp(App).use(Quasar, quasarUserOptions).mount('#app');
