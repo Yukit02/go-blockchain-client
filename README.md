@@ -1,4 +1,4 @@
-# go_blockchain_client
+# go-blockchain-client
 
 ## Project setup
 ```
