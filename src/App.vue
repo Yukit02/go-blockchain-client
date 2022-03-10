@@ -8,3 +8,9 @@ export default defineComponent({
   name: 'App',
 });
 </script>
+
+<style>
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+</style>
