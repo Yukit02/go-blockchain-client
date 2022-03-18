@@ -1,49 +1,41 @@
 <template>
-  <q-page class="row items-center justify-evenly">
-    <example-component
-      title="Example component"
-      active
-      :todos="todos"
-      :meta="meta"
-    ></example-component>
+  <q-page class="my-12 mx-auto w-9/12">
+    <div>
+      <h2 class="text-4xl">
+        Wallet
+      </h2>
+
+      <p class="my-3 text-xl">
+        0
+      </p>
+
+      <q-btn label="Reload Wallet" />
+
+      <q-input label="Public Key" class="my-3" />
+
+      <q-input label="Private Key" class="my-3" />
+
+      <q-input label="Blockchain Address" class="my-3" />
+    </div>
+
+    <div class="mt-20">
+      <h2 class="text-4xl">
+        Send Money
+      </h2>
+
+      <q-input prefix="Address:" class="my-3" dense/>
+
+      <q-input prefix="Amount:" class="my-3 w-48" dense/>
+
+      <q-btn color="primary" class="mt-5" label="Send" />
+    </div>
   </q-page>
 </template>
 
 <script lang="ts">
-import { Todo, Meta } from 'components/models';
-import ExampleComponent from 'components/CompositionComponent.vue';
-import { defineComponent, ref } from 'vue';
+import { defineComponent } from 'vue';
 
 export default defineComponent({
   name: 'PageIndex',
-  components: { ExampleComponent },
-  setup() {
-    const todos = ref<Todo[]>([
-      {
-        id: 1,
-        content: 'ct1',
-      },
-      {
-        id: 2,
-        content: 'ct2',
-      },
-      {
-        id: 3,
-        content: 'ct3',
-      },
-      {
-        id: 4,
-        content: 'ct4',
-      },
-      {
-        id: 5,
-        content: 'ct5',
-      },
-    ]);
-    const meta = ref<Meta>({
-      totalCount: 1200,
-    });
-    return { todos, meta };
-  },
 });
 </script>
